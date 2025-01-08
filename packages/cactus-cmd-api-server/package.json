@@ -44,7 +44,7 @@
   ],
   "scripts": {
     "benchmark": "tsx ./src/test/typescript/benchmark/run-cmd-api-server-benchmark.ts .tmp/benchmark-results/cmd-api-server/run-cmd-api-server-benchmark.ts.log",
-    "build:bundle": "ncc build ./dist/lib/main/typescript/cmd/cactus-api.js --minify --out=./dist/bundle/ncc/",
+    "build:bundle": "node init && ncc build ./dist/lib/main/typescript/cmd/cactus-api.js --minify --out=./dist/bundle/ncc/",
     "codegen": "yarn run --top-level run-s 'codegen:*'",
     "codegen:openapi": "npm run generate-sdk",
     "codegen:proto": "run-s proto:openapi proto:protoc-gen-ts",
@@ -54,7 +54,7 @@
     "generate-sdk:typescript-axios": "openapi-generator-cli generate -i ./src/main/json/openapi.json -g typescript-axios -o ./src/main/typescript/generated/openapi/typescript-axios --reserved-words-mappings protected=protected --ignore-file-override ../../openapi-generator-ignore",
     "proto:openapi": "openapi-generator-cli generate -i ./src/main/json/openapi.json -g protobuf-schema --model-name-suffix=PB --additional-properties=packageName=org.hyperledger.cactus.cmd_api_server -o ./src/main/proto/generated/openapi/ -t=./src/main/openapi-generator/templates/protobuf-schema/",
     "proto:protoc-gen-ts": "yarn run grpc_tools_node_protoc --plugin=protoc-gen-ts=../../node_modules/.bin/protoc-gen-ts --ts_out=grpc_js:./src/main/typescript/generated/proto/protoc-gen-ts/ --proto_path ./src/main/proto/generated/openapi/ ./src/main/proto/generated/openapi/services/*.proto",
-    "start:bundle": "node ./dist/bundle/ncc/index.js --config-file=../../.config.json",
+    "start:bundle": "node init && node ./dist/bundle/ncc/index.js --config-file=../../.config.json",
     "watch": "npm-watch",
     "webpack": "npm-run-all webpack:dev",
     "webpack:dev": "npm-run-all webpack:dev:node webpack:dev:web",

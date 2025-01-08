@@ -7,11 +7,11 @@
   "module": "dist/www.js",
   "types": "dist/www.d.ts",
   "scripts": {
-    "build": "npm run build-ts && npm run build:dev:backend:postbuild",
-    "build-ts": "tsc",
-    "build:dev:backend:postbuild": "cp -f ../../yarn.lock ./dist/",
-    "start": "docker-compose build && docker-compose up",
-    "start-dockerless": "node ./dist/www.js"
+    "build": "node init && npm run build-ts && npm run build:dev:backend:postbuild",
+    "build-ts": "node init && tsc",
+    "build:dev:backend:postbuild": "node init && cp -f ../../yarn.lock ./dist/",
+    "start": "node init && docker-compose build && docker-compose up",
+    "start-dockerless": "node init && node ./dist/www.js"
   },
   "dependencies": {
     "@hyperledger/cactus-common": "2.1.0",

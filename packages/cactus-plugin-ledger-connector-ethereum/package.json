@@ -52,7 +52,7 @@
     "dist/*"
   ],
   "scripts": {
-    "build:dev:backend:postbuild": "npm run copy-artillery-config",
+    "build:dev:backend:postbuild": "node init && npm run copy-artillery-config",
     "codegen": "yarn run --top-level run-s 'codegen:*'",
     "codegen:openapi": "npm run generate-sdk",
     "copy-artillery-config": "cp -af  ./src/test/typescript/benchmark/setup/geth-benchmark-config.yaml ./src/test/typescript/benchmark/setup/artillery-helper-functions.js ./dist/lib/test/typescript/benchmark/setup",

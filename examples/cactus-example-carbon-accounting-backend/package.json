@@ -44,7 +44,7 @@
   ],
   "scripts": {
     "solidity": "hardhat compile",
-    "start": "CONFIG_FILE=./example-config.json node dist/lib/main/typescript/carbon-accounting-app-cli.js",
+    "start": "node init && CONFIG_FILE=./example-config.json node dist/lib/main/typescript/carbon-accounting-app-cli.js",
     "watch": "npm-watch",
     "webpack": "npm-run-all webpack:dev",
     "webpack:dev": "npm-run-all webpack:dev:node webpack:dev:web",

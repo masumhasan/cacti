@@ -16,7 +16,7 @@
     "bin"
   ],
   "scripts": {
-    "build": "yarn clean-build && yarn compile && yarn copy-templates && yarn copy-data && yarn copy-basic-wallets && yarn copy-credentials",
+    "build": "node init && yarn clean-build && yarn compile && yarn copy-templates && yarn copy-data && yarn copy-basic-wallets && yarn copy-credentials",
     "clean-build": "rm -rf ./build",
     "compile": "tsc -p .",
     "copy-basic-wallets": "cp -a ./src/wallet-network1 ./build/ && cp -a ./src/wallet-network2 ./build/",

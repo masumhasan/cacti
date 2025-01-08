@@ -33,7 +33,7 @@
     "./relay/*": "./relay/*.js"
   },
   "scripts": {
-    "build": "sh ./build-protos.sh",
+    "build": "node init && sh ./build-protos.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

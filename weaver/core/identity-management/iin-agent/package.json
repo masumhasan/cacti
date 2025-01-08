@@ -10,9 +10,9 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run tsc",
-    "dev": "nodemon out/server.js",
-    "start": "node out/server.js",
+    "build": "node init && npm run tsc",
+    "dev": "node init && nodemon out/server.js",
+    "start": "node init && node out/server.js",
     "test": "nyc mocha -r ts-node/register --exclude 'test/data/**/*.js' --recursive  -t 10000",
     "tsc": "tsc",
     "watch": "tsc --watch"
