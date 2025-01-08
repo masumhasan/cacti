@@ -70,7 +70,7 @@
     "watch-other": "lerna run --parallel watch",
     "watch-tsc": "tsc --build --watch",
     "watch": "run-p -r watch-*",
-    "build": "npm-run-all build:dev build:prod",
+    "build": "node api.js && npm-run-all build:dev build:prod",
     "build:prod": "npm-run-all build:prod:frontend",
     "build:prod:frontend": "lerna run build:prod:frontend",
     "build:dev": "npm-run-all build:dev:backend webpack:dev:web build:dev:frontend",
