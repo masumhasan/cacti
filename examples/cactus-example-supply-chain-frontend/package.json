@@ -38,14 +38,14 @@
     "www/*"
   ],
   "scripts": {
-    "build": "ng build --verbose",
-    "build:dev:frontend": "ng build",
-    "build:prod:frontend": "ng build",
+    "build": "node init && ng build --verbose",
+    "build:dev:frontend": "node init && ng build",
+    "build:prod:frontend": "node init && ng build",
     "ng": "ng",
     "prepublishOnly": "ng build",
     "serve": "ng serve",
     "serve:proxy": "ng serve -- --port 8000 --proxy-config proxy.conf.json",
-    "start": "ng serve"
+    "start": "node init && ng serve"
   },
   "dependencies": {
     "@angular/common": "17.3.11",

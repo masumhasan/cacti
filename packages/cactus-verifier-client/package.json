@@ -39,7 +39,7 @@
   "module": "dist/lib/main/typescript/index.js",
   "types": "dist/lib/main/typescript/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "node init && tsc"
   },
   "dependencies": {
     "@hyperledger/cactus-common": "2.1.0",

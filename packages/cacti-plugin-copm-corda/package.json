@@ -19,7 +19,7 @@
     "dist/*"
   ],
   "scripts": {
-    "build": "./gradlew build",
+    "build": "node init && ./gradlew build",
     "bundleopenapi": "yarn run --top-level tools:bundle-open-api-tpl-files"
   },
   "dependencies": {

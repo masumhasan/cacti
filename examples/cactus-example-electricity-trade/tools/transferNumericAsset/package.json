@@ -4,8 +4,8 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "build": "npm run build-ts && npm run copy-static-assets",
-    "build-ts": "tsc",
+    "build": "node init && npm run build-ts && npm run copy-static-assets",
+    "build-ts": "node init && tsc",
     "tslint": "tslint -c tslint.json -p tsconfig.json",
     "copy-static-assets": "ts-node copyStaticAssets.ts"
   },

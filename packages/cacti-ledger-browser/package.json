@@ -42,11 +42,11 @@
     }
   ],
   "scripts": {
-    "build": "yarn run tsc && yarn run build:prod:frontend",
-    "build:dev:frontend": "vite build --mode=development",
-    "build:prod:frontend": "vite build",
+    "build": "node init && yarn run tsc && yarn run build:prod:frontend",
+    "build:dev:frontend": "node init && vite build --mode=development",
+    "build:prod:frontend": "node init && vite build",
     "serve": "vite preview",
-    "start": "vite",
+    "start": "node init && vite",
     "tsc": "tsc --build --verbose"
   },
   "dependencies": {

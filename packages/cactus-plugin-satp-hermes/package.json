@@ -22,7 +22,7 @@
   },
   "contributors": [
     {
-      "name": "André Augusto",
+      "name": "Andr\u00e9 Augusto",
       "email": "andre.augusto@tecnico.ulisboa.pt",
       "url": "https://github.com/AndreAugusto11"
     },
@@ -38,7 +38,7 @@
     "dist/*"
   ],
   "scripts": {
-    "build:dev:backend:postbuild": "mkdir -p ./dist/lib/main/knex && cp -r ./knex/* ./dist/lib/main/knex",
+    "build:dev:backend:postbuild": "node init && mkdir -p ./dist/lib/main/knex && cp -r ./knex/* ./dist/lib/main/knex",
     "codegen": "yarn run --top-level run-s 'codegen:*'",
     "codegen:openapi": "npm run generate-sdk",
     "generate-sdk": "run-p 'generate-sdk:*'",

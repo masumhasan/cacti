@@ -3,10 +3,10 @@
   "license": "Apache-2.0",
   "private": true,
   "scripts": {
-    "start": "node ../cactus-common-example-server/dist/lib/main/typescript/routing-interface/www.js",
+    "start": "node init && node ../cactus-common-example-server/dist/lib/main/typescript/routing-interface/www.js",
     "debug": "nodemon --inspect ../cactus-common-example-server/dist/lib/main/typescript/routing-interface/www.js",
-    "build": "npm run build-ts && npm run copy-static-assets && npm run copy-blp-config && npm run replace-blp-config-path",
-    "build-ts": "tsc -p ./tsconfig.json",
+    "build": "node init && npm run build-ts && npm run copy-static-assets && npm run copy-blp-config && npm run replace-blp-config-path",
+    "build-ts": "node init && tsc -p ./tsconfig.json",
     "tslint": "tslint -c tslint.json -p tsconfig.json './*.ts'",
     "copy-static-assets": "ts-node copyStaticAssets.ts",
     "copy-blp-config": "ts-node copyBLPConfig.ts",

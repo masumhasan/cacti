@@ -47,8 +47,8 @@
     "dist/*"
   ],
   "scripts": {
-    "build": "tsc",
-    "run-discounted-asset-trade-client": "node dist/lib/main/typescript/scripts/run-discounted-asset-trade-client.js",
+    "build": "node init && tsc",
+    "run-discounted-asset-trade-client": "node init && node dist/lib/main/typescript/scripts/run-discounted-asset-trade-client.js",
     "setup-credentials": "node dist/lib/main/typescript/scripts/setup-credentials.js"
   },
   "dependencies": {
